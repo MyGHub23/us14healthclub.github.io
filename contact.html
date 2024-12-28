@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #e6f7ff;
+            height: 100vh;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background: #bee8c9;
+            border: 1px solid #2003c3;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .heading {
+            margin-top: 5px;
+            text-align: center;
+            font-size: 1.5em;
+            color: yellow;
+            margin-bottom: 20px;
+            background-color: blueviolet;
+            display: inline-block;
+            padding: 5px;
+            border-radius: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #f0f8ff;
+            font-weight: bold;
+        }
+
+        th {
+            border: 1px solid #ddd;
+            padding: 5px;
+            text-align: center;
+        }
+
+        td {
+            line-height: 2rem;
+            color: blue;
+            font-size: 1.2rem;
+        }
+
+        td.name {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        td.mobile {
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .address {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: yellow;
+            font-weight: bold;
+            background-color: blueviolet;
+            padding: 5px;
+            width: 250px;
+            border-radius: 5px;
+            display: inline-block;
+            border-radius: 20px;
+        }
+
+        .qr-code {
+            margin-top: 20px;
+        }
+
+        .qr-code img {
+            max-width: 150px;
+            border: 2px solid #2003c3;
+            border-radius: 10px;
+        }
+
+
+
+        .content {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            background: #bee8c9;
+            border: 1px solid #2003c3;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .heading {
+            margin-top: 5px;
+            text-align: center;
+            font-size: 1.5em;
+            color: yellow;
+            margin-bottom: 20px;
+            background-color: blueviolet;
+            display: inline-block;
+            padding: 5px;
+            border-radius: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: #f0f8ff;
+            font-weight: bold;
+        }
+
+        th {
+            border: 1px solid #ddd;
+            padding: 5px;
+            text-align: center;
+        }
+
+        td {
+            line-height: 2rem;
+            color: blue;
+            font-size: 1.2rem;
+        }
+
+        td.name {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        td.mobile {
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .address {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: yellow;
+            font-weight: bold;
+            background-color: blueviolet;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            border-radius: 20px;
+        }
+
+        .qr-code {
+            margin-top: 20px;
+        }
+
+        .qr-code img {
+            max-width: 150px;
+            border: 2px solid #2003c3;
+            border-radius: 10px;
+        }
+
+
+        @media screen and (max-width: 480px) {
+            body {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+
+            .heading {
+                font-size: .9em;
+                padding: 8px;
+            }
+
+            .content {
+                max-width: 100%;
+                margin: 10px;
+                padding: 10px;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th {
+                font-size: .8rem;
+
+            }
+
+            td.name {
+                text-align: left;
+                padding-left: 5px;
+            }
+
+
+            td {
+                line-height: 2rem;
+                color: blue;
+                font-size: .8rem;
+            }
+
+            .address {
+                font-size: .9em;
+                padding: 5px;
+                width: 180px;
+            }
+
+            .qr-code img {
+                max-width: 100px;
+            }
+
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h3 class="heading">Contact Information</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Mobile No</th>
+            </tr>
+            <tr>
+                <td class="name">Md. Majharul Haque</td>
+                <td class="mobile">01911362563</td>
+            </tr>
+            <tr>
+                <td class="name">Md. Ruhul Amin Montu</td>
+                <td class="mobile">01717116979</td>
+            </tr>
+        </table>
+        <div class="address">
+            Uttara Sector 14 Park, <br> Road No: 20/1, Uttara, <br>Dhaka-1230
+        </div>
+        <div class="qr-code">
+            <img src="./gallery/us14hcqrcode.jpg" alt="QR Code">
+        </div>
+    </div>
+</body>
+
+</html>
