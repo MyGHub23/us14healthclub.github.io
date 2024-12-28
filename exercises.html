@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+    <style>
+        table {
+            width: 80%;
+            /* margin: 0 auto; */
+            /* Centers the table */
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            table-layout: fixed;
+            /* Enforces fixed column widths */
+            margin-left: 5px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 5px;
+            height: 20px;
+            /* Adjusts the row height */
+            text-align: left;
+            overflow: hidden;
+            /* Hides overflow */
+            text-overflow: ellipsis;
+            /* Adds ellipsis for overflowing text */
+            white-space: nowrap;
+            /* Prevents text wrapping */
+        }
+
+        th {
+            background-color: #44a7fd;
+            color: white;
+            text-align: center;
+            /* Centers the headers */
+        }
+
+        .table-container {
+
+            background-color: white;
+
+        }
+
+        td:nth-child(1) {
+            text-align: center;
+            /* Center-aligns the No. column */
+        }
+
+        td:nth-child(2) {
+            font-weight: bold;
+            color:blue;
+        }
+
+        td:nth-child(4) {
+            text-align: right;
+            /* Right-aligns the Times column */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        @media screen and (max-width: 480px) {
+            tr {
+                font-size: 14px;
+            }
+
+
+            td {
+                font-size: 12px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <h3 style="color: #44a7fd; text-align: center;">List of Exercises</h3>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 10%;">No.</th>
+                    <th style="width: 20%;">Exercise Name</th>
+                    <th style="width: 50%;">Description</th>
+                    <th style="width: 10%;">Times</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Push-ups</td>
+                    <td>Strengthens upper body and core</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Squats</td>
+                    <td>Builds lower body strength</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Running</td>
+                    <td>Improves cardiovascular health</td>
+                    <td>30</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
