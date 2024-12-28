@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+         /* home */
+         .home img {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 35%;
+            border-radius: 50%;
+        }
+
+        main {
+            margin-left: 220px;
+            padding: 100px 20px;
+
+        }
+        .home {
+            margin-top: 50px;
+            position: relative;
+            height: 70vh;
+            text-align: center;
+            background: linear-gradient(to bottom, yellow, #e0f7fa);
+            border-radius: 40px;
+        }
+
+        .home h2,
+        .home p {
+            position: relative;
+            top: -7%;
+            transform: translateY(-20%);
+            margin: 20px auto;
+            color: blueviolet;
+            line-height: 1.5em;
+        }
+
+        .home p {
+            font-size: 1em;
+            color: blueviolet;
+            top: -5%;
+            width: 80%;
+            background: linear-gradient(to right, #eac4c4, #0fd26d);
+            border: 1px solid #b8daff;
+            border-radius: 10px;
+            padding: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            line-height: 1.5;
+            animation: fadeIn 2s ease-in-out;
+            text-shadow: 1px 1px 2px #0056b3;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Media Queries for Responsive Design */
+        @media screen and (max-width: 768px) {
+            main {
+                margin-left: 0;
+                padding: 80px 10px;
+            }
+
+            aside {
+                position: relative;
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 5px 0;
+            }
+
+            aside a {
+                margin: 5px;
+                padding: 5px;
+                font-size: 12px;
+            }
+
+            header h1 {
+                font-size: 1em;
+            }
+
+            header h2 {
+                font-size: 0.5em;
+            }
+
+            header img {
+                height: 30px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header {
+                height: 40px;
+            }
+
+            header h1 {
+                font-size: 0.8em;
+            }
+
+            header h2 {
+                font-size: 0.7em;
+            }
+
+            header img {
+                height: 20px;
+            }
+
+            .home img {
+                top: 75%;
+                width: 60%;
+            }
+
+            .home h2,
+            .home p {
+                transform: translateY(0);
+                margin: 10px auto;
+                font-size: 0.9em;
+            }
+
+            .home p {
+                width: 80%;
+            }
+
+            aside {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+                height: auto;
+                padding: 5px;
+                margin-top: -20px;
+            }
+
+            aside a {
+                margin: 5px;
+                padding: 5px;
+                font-size: 12px;
+                text-align: center;
+                white-space: nowrap;
+                background: blue;
+                border-radius: 5px;
+                color: white;
+                text-decoration: none;
+            }
+
+            .footer {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="home">
+        <h2>আপনাকে আমাদের হেলথ ক্লাবে আন্তরিক স্বাগতম...</h2>
+        <!-- <h2>Your are Most Welcome to our Health Club...</h2> -->
+        <p>
+            আমরা আমাদের সকল সদস্যের স্বাস্থ্য ও ফিটনেস উন্নয়নে প্রতিশ্রুতিবদ্ধ। আমাদের সাথে যোগ দিন একটি
+            স্বাস্থ্যকর ও সুখী জীবনের যাত্রায়। বিভিন্ন ধরণের ব্যায়াম ও কার্যক্রম আবিষ্কার করুন এবং আমাদের ক্রমবর্ধমান
+            ফিটনেস অনুরাগীদের পরিবারের অংশ হয়ে উঠুন।
+        </p>
+        <img src="./gallery/main_img.jpg" alt="Health Club Main Image">
+    </section>
+</body>
+
+</html>

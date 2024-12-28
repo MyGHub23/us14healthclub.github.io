@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member List</title>
+    <script>
+        // Fetch and load JSON data from external file
+        async function loadMembers() {
+            try {
+                const response = await fetch('members.json'); // Corrected file name
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const members = await response.json();
+                generateTable(members);
+            } catch (error) {
+                console.error('Error loading member data:', error);
+            }
+        }
+
+        // Function to dynamically generate the table
+        function generateTable(members) {
+            const tableBody = document.getElementById("table-body");
+            tableBody.innerHTML = ""; // Clear existing rows
+            members.forEach(member => {
+                const row = document.createElement("tr");
+                Object.values(member).forEach(value => {
+                    const cell = document.createElement("td");
+                    cell.textContent = value;
+                    row.appendChild(cell);
+                });
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Function to filter table rows based on search input
+        function filterTable() {
+            const filter = document.getElementById("search-input").value.toLowerCase();
+            const rows = document.querySelectorAll("#table-body tr");
+
+            rows.forEach(row => {
+                const cells = row.getElementsByTagName("td");
+                let match = false;
+                for (let cell of cells) {
+                    if (cell.textContent.toLowerCase().includes(filter)) {
+                        match = true;
+                        break;
+                    }
+                }
+                row.style.display = match ? "" : "none";
+            });
+        }
+
+        // Load members on page load
+        window.onload = loadMembers;
+    </script>
+    <style>
+        .table-container {
+            background-color: white;
+        }
+
+        table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #44a7fd;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        td:nth-child(2),
+        td:nth-child(3) {
+            font-weight: bold;
+            color: blue;
+        }
+
+        @media screen and (max-width: 480px) {
+            tr {
+                font-size: 14px;
+            }
+
+            td {
+                font-size: 12px;
+            }
+
+            #search-input {
+                width: 120% !important;
+                /* Force this width to override other rules */
+                font-size: 12px;
+                padding: 4px !important;
+                margin: 0 auto;
+                /* Center the search box on small screens */
+                display: block;
+                /* Ensure it occupies its own line */
+            }
+            .search-container {
+                text-align: right;
+                margin: 10px 80px 5px 90px !important;
+                /* Adjusted right margin for a slight shift to the left */
+            }
+
+        }
+
+        .search-container {
+            text-align: right;
+            margin: 10px 220px 10px 0;
+            /* Adjusted right margin for a slight shift to the left */
+        }
+
+        #search-input {
+            width: 18%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid blueviolet;
+            border-radius: 4px;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 style="text-align: center; color: #44a7fd;">List of Members</h3>
+    <div class="search-container">
+        <input type="text" id="search-input" onkeyup="filterTable()" placeholder="Search for members...">
+    </div>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Blood Group</th>
+                    <th>Mobile No</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <!-- Rows will be dynamically generated -->
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uttara Sector 14 Health Club</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+        header {
+            background-color: #44a7fd;
+            color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 4px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            height: 60px;
+        }
+
+        header img {
+            position: absolute;
+            left: 10px;
+            top: 15px;
+            height: 50px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: bold;
+            color: blueviolet;
+            /* Changed text color */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            animation: textGlow 3s infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            }
+
+            to {
+                text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 1em;
+            font-style: italic;
+            color: yellow;
+        }
+
+        aside {
+            position: fixed;
+            top: 75px;
+            left: 5px;
+            width: 150px;
+            height: calc(100% - 75px);
+            background-image: linear-gradient(30deg, #07f251, #44a7fd);
+            border-top-right-radius: 80px;
+            color: #fff;
+            padding-left: 20px;
+            z-index: 1000;
+            overflow: auto;
+            height: 73%;
+        }
+
+        aside a {
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            display: block;
+            padding: 12px 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        aside a:hover {
+            color: #3f5efb;
+            background-color: yellow;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .footer {
+            background: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 0.9rem;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer b {
+            color: #f3ec78;
+        }
+
+
+        /* home */
+        .home img {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 35%;
+            border-radius: 50%;
+        }
+
+        main {
+            margin-left: 220px;
+            padding: 100px 20px;
+
+        }
+
+        /* main {
+
+            background: linear-gradient(to right, green, #2807bc);
+        } */
+        .home {
+            margin-top: 50px;
+            position: relative;
+            height: 70vh;
+            text-align: center;
+            background: linear-gradient(to bottom, yellow, #e0f7fa);
+            border-radius: 40px;
+        }
+
+        .home h2,
+        .home p {
+            position: relative;
+            top: -7%;
+            transform: translateY(-20%);
+            margin: 20px auto;
+            color: blueviolet;
+            line-height: 1.5em;
+        }
+
+        .home p {
+            font-size: 1em;
+            color: blueviolet;
+            top: -5%;
+            width: 80%;
+            background: linear-gradient(to right, #eac4c4, #0fd26d);
+            border: 1px solid #b8daff;
+            border-radius: 10px;
+            padding: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            line-height: 1.5;
+            animation: fadeIn 2s ease-in-out;
+            text-shadow: 1px 1px 2px #0056b3;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Media Queries for Responsive Design */
+        @media screen and (max-width: 768px) {
+            main {
+                margin-left: 0;
+                padding: 80px 10px;
+            }
+
+            aside {
+                position: relative;
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 5px 0;
+            }
+
+            aside a {
+                margin: 5px;
+                padding: 5px;
+                font-size: 12px;
+            }
+
+            header h1 {
+                font-size: 1em;
+            }
+
+            header h2 {
+                font-size: 0.5em;
+            }
+
+            header img {
+                height: 30px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header {
+                height: 40px;
+            }
+
+            header h1 {
+                font-size: 0.8em;
+            }
+
+            header h2 {
+                font-size: 0.7em;
+            }
+
+            header img {
+                height: 20px;
+            }
+
+            .home img {
+                top: 75%;
+                width: 60%;
+            }
+
+            .home h2,
+            .home p {
+                transform: translateY(0);
+                margin: 10px auto;
+                font-size: 0.9em;
+            }
+
+            .home p {
+                width: 80%;
+            }
+
+            aside {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+                height: auto;
+                padding: 5px;
+                margin-top: -20px;
+            }
+
+            aside a {
+                margin: 5px;
+                padding: 5px;
+                font-size: 12px;
+                text-align: center;
+                white-space: nowrap;
+                background: blue;
+                border-radius: 5px;
+                color: white;
+                text-decoration: none;
+            }
+
+            .footer {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+    <script>
+        function loadContent(page) {
+            const contentArea = document.getElementById('content');
+            fetch(page)
+                .then(response => response.text())
+                .then(html => {
+                    contentArea.innerHTML = html;
+                    if (page.includes('memberlist.html')) {
+                        fetch('./members.json')
+                            .then(response => response.json())
+                            .then(members => {
+                                const tableBody = document.querySelector('#table-body');
+                                if (tableBody) {
+                                    tableBody.innerHTML = ''; // Clear previous rows
+                                    members.forEach(member => {
+                                        const row = document.createElement('tr');
+                                        Object.values(member).forEach(value => {
+                                            const cell = document.createElement('td');
+                                            cell.textContent = value;
+                                            row.appendChild(cell);
+                                        });
+                                        tableBody.appendChild(row);
+                                    });
+                                }
+                                const searchInput = document.getElementById('search-input');
+                                if (searchInput) {
+                                    searchInput.addEventListener('keyup', () => {
+                                        const filter = searchInput.value.toLowerCase();
+                                        const rows = document.querySelectorAll('#table-body tr');
+                                        rows.forEach(row => {
+                                            const cells = row.getElementsByTagName('td');
+                                            let match = false;
+                                            for (let cell of cells) {
+                                                if (cell.textContent.toLowerCase().includes(filter)) {
+                                                    match = true;
+                                                    break;
+                                                }
+                                            }
+                                            row.style.display = match ? '' : 'none';
+                                        });
+                                    });
+                                }
+                            })
+                            .catch(err => console.error('Error loading JSON data:', err));
+                    }
+                })
+                .catch(err => console.error('Error loading content:', err));
+        }
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <img src="./gallery/logo.png" alt="Health Club Logo">
+        <h1>Uttara Sector 14 Health Club</h1>
+        <h2>Your Path to a Healthier Life</h2>
+    </header>
+    <aside style="padding-top: 60px;">
+
+        <a href="#home" onclick="loadContent('./home.html')">Home</a>
+        <a href="#about" onclick="loadContent('./about.html')">About Us</a>
+        <a href="#exercises" onclick="loadContent('./exercises.html')">Exercises</a>
+        <a href="#members" onclick="loadContent('./memberlist.html')">Members</a>
+        <a href="#new_event" onclick="loadContent('./news_event.html')">News & Events</a>
+        <a href="#committee" onclick="loadContent('./committee.html')">Committee</a>
+        <a href="#gallery" onclick="loadContent('./hcgallery.html')">Gallery</a>
+        <a href="#contact" onclick="loadContent('./contact.html')">Contact</a>
+
+    </aside>
+
+    <main id="content">
+        <section class="home">
+            <h2>আপনাকে আমাদের হেলথ ক্লাবে আন্তরিক স্বাগতম...</h2>
+            <!-- <h2>Your are Most Welcome to our Health Club...</h2> -->
+            <p>
+                আমরা আমাদের সকল সদস্যের স্বাস্থ্য ও ফিটনেস উন্নয়নে প্রতিশ্রুতিবদ্ধ। আমাদের সাথে যোগ দিন একটি
+                স্বাস্থ্যকর ও সুখী জীবনের যাত্রায়। বিভিন্ন ধরণের ব্যায়াম ও কার্যক্রম আবিষ্কার করুন এবং আমাদের
+                ক্রমবর্ধমান
+                ফিটনেস অনুরাগীদের পরিবারের অংশ হয়ে উঠুন।
+            </p>
+            <img src="./gallery/main_img.jpg" alt="Health Club Main Image">
+        </section>
+    </main>
+    <div class="footer">
+        Created by <a href="mailto:mydreamcarebd@gmail.com"
+            style="color: yellow; text-decoration: underline;"><strong>Abu Momen</strong></a> | © 2024 All Rights
+        Reserved
+    </div>
+</body>
+
+</html>
