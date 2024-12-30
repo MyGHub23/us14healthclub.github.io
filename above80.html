@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Above 80 Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8f5e9; /* Light green background */
+        }
+
+        h3 {
+            color: #2e7d32; /* Dark green */
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border: 2px solid #4caf50; /* Green border */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        @media screen and (max-width: 480px) {
+            .gallery img {
+                width: 100px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Above 80 Gallery</h3>
+    <div class="gallery">
+        <img src="./gallery/above80_1.jpg" alt="Above 80 Picture 1">
+        <img src="./gallery/above80_2.jpg" alt="Above 80 Picture 2">
+    </div>
+</body>
+
+</html>
