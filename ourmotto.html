@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Motto</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, #ffe259, #ffa751);
+            height: 100vh;
+        }
+
+        .content {
+            max-width: 850px;
+            margin: 20px;
+            padding: 25px;
+            background: linear-gradient(to bottom right, #ffffff, #f5f5f5);
+            border: 3px solid #ff6f61;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            animation: glow 3s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            }
+            to {
+                box-shadow: 0 8px 16px rgba(255, 105, 180, 0.8);
+            }
+        }
+
+        .heading {
+            margin-top: 5px;
+            text-align: center;
+            font-size: 2em;
+            color: #fff;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #ff6f61, #ff9a9e);
+            display: inline-block;
+            padding: 12px;
+            border-radius: 25px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .motto {
+            font-size: 1.5em;
+            color: #333;
+            line-height: 1.5;
+            background: #cee57b;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .motto span {
+            display: block;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #1e88e5;
+            text-shadow: 1px 1px 3px #ffa726;
+           
+        }
+
+        .motto span::before {
+            content: "\1F4AA "; /* Flexing arm emoji */
+            color: #ff6f61;
+            font-size: 1.2em;
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+
+            .heading {
+                font-size: 1em;
+                padding: 5px,5px 10px;
+                margin-bottom: 5px;
+                margin-top: -5px;
+            }
+
+            .content {
+                max-width: 95%;
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .motto {
+                font-size: .9em;
+                padding: 10px;
+                line-height: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h3 class="heading">মূলমন্ত্র</h3>
+        <!-- <h3 class="heading">Our Mottos</h3> -->
+        <div class="motto">
+            <span>ঝড় বৃষ্টি মানবো না, ব্যায়াম আমরা ছাড়ব না।</span>
+            <span>নিয়মিত ব্যায়াম করি, শরীরটাকে সুস্থ রাখি।</span>
+            <span>সকালের ব্যায়াম, দিনভর কর্মশক্তি।</span>
+            <span>ব্যায়াম ভালো, জীবন ভালো।</span>
+            <span>ব্যায়ামই স্বাস্থ্য, স্বাস্থ্যই শক্তি।</span>
+            <span>সুস্থ থাকুন, ব্যায়াম করুন।</span>
+        </div>
+    </div>
+</body>
+
+</html>
