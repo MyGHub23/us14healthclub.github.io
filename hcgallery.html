@@ -29,12 +29,13 @@
 
         .gallery img {
             width: 300px;
-            height: 400px;
+            height: 300px;
             object-fit: cover;
             border: 2px solid brown;
-            border-radius: 50%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 10%;
+            
         }
 
         .gallery img:hover {
@@ -45,8 +46,7 @@
         @media screen and (max-width: 480px) {
             .gallery img {
                 width: 100px;
-                height: 200px;
-                
+                height: 100px;
             }
         }
     </style>
@@ -57,7 +57,7 @@
     <div class="gallery">
         <img src="./gallery/1gpic.jpg" alt="Gallery Picture 1">
         <img src="./gallery/2gpic.jpg" alt="Gallery Picture 2">
-        <img src="./gallery/3gpic.jpg" alt="Gallery Picture 2">
+        <img src="./gallery/3gpic.jpg" alt="Gallery Picture 3">
     </div>
 </body>
 
