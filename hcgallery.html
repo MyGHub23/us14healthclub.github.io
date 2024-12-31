@@ -35,12 +35,35 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s, box-shadow 0.3s;
             border-radius: 10%;
-            
+            cursor: pointer;
         }
 
         .gallery img:hover {
             transform: scale(1.05);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .lightbox:target {
+            display: flex;
         }
 
         @media screen and (max-width: 480px) {
@@ -55,10 +78,24 @@
 <body>
     <h3>Health Club Gallery</h3>
     <div class="gallery">
+        <a href="#img1"><img src="./gallery/1gpic.jpg" alt="Gallery Picture 1"></a>
+        <a href="#img2"><img src="./gallery/2gpic.jpg" alt="Gallery Picture 2"></a>
+        <a href="#img3"><img src="./gallery/3gpic.jpg" alt="Gallery Picture 3"></a>
+        <a href="#img4"><img src="./gallery/4gpic.jpg" alt="Gallery Picture 4"></a>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="img1" class="lightbox">
         <img src="./gallery/1gpic.jpg" alt="Gallery Picture 1">
+    </div>
+    <div id="img2" class="lightbox">
         <img src="./gallery/2gpic.jpg" alt="Gallery Picture 2">
+    </div>
+    <div id="img3" class="lightbox">
         <img src="./gallery/3gpic.jpg" alt="Gallery Picture 3">
-        <img src="./gallery/4gpic.jpg" alt="Gallery Picture 3">
+    </div>
+    <div id="img4" class="lightbox">
+        <img src="./gallery/4gpic.jpg" alt="Gallery Picture 4">
     </div>
 </body>
 
